@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Developer Internship | Cognifyz Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .about-internship {
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .about-internship p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Cognifyz <span style="color: #ff0040;">Technologies</span></div>
+      <button class="cta-button" onclick="scrollToSection()">Apply Now</button>
+    </nav>
+    <div class="hero-content fade-in">
+      <h1>Web Developer Internship Opportunities</h1>
+      <p>Join Cognifyz Technologies for a hands-on internship experience designed to launch your tech career. Duration: <strong>4 weeks</strong>.</p>
+    </div>
+  </header>
+
+  <section class="highlights slide-in">
+    <h2>Why Join Our Internship?</h2>
+    <ul>
+      <li>💼 Real-world project experience</li>
+      <li>🧠 1:1 Mentorship with industry professionals</li>
+      <li>🛠️ Skill development in HTML, CSS, JavaScript, and more</li>
+      <li>📃 Certificate upon successful completion</li>
+    </ul>
+    <div class="gallery">
+      <img src="zz.jpg" alt="Team Collaboration" loading="lazy">
+    </div>
+
+  </section>
+
+  <section class="qualifications fade-in">
+    <h2>What We’re Looking For</h2>
+    <p>We seek passionate learners with basic knowledge in:</p>
+    <ul>
+      <li>✅ HTML, CSS, JavaScript</li>
+      <li>✅ Git & GitHub</li>
+      <li>✅ Problem-solving and teamwork</li>
+    </ul>
+  </section>
+
+  <!-- 🔽 New Section: Paragraph + Images -->
+  <section class="about-internship fade-in">
+    <h2>Life as an Intern at Cognifyz</h2>
+    <p>
+      Interns at Cognifyz work on real client projects, participate in brainstorming sessions, and collaborate with experienced mentors. This vibrant environment helps students grow both technically and professionally.
+    </p>
+    <div class="gallery">
+      <img src="z1.jpg" alt="Team Collaboration" loading="lazy">
+      <img src="z3.jpg" alt="Project Development" loading="lazy">
+      <img src="z2.jpg" alt="Intern Workshop" loading="lazy">
+    </div>
+  </section>
+
+  <section class="cta-section" id="apply">
+    <h2>Ready to Kickstart Your Career?</h2>
+    <button class="cta-button large bounce">Apply Now</button>
+  </section>
+
+  <footer>
+    <p>📧 Email: hr@cognifyztech.com</p>
+    <p>🌐 Website: <a href="https://www.cognifyz.com" target="_blank">www.cognifyz.com</a></p>
+    <p>© 2025 Cognifyz Technologies. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToSection() {
+      document.getElementById('apply').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Intersection Observer for animation triggers
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in, .slide-in').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
