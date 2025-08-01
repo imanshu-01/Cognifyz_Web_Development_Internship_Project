@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task2 - Interactive</title>
+  <style>
+    body {
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ffee;
+      text-shadow: 0 0 10px #00ffee;
+    }
+
+    .clicker1, .clicker, .clicker2 {
+      color: white;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 12px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    .clicker1 {
+      background: linear-gradient(45deg, #ff0080, #7928ca);
+    }
+
+    .clicker1:hover {
+      box-shadow: 0 0 20px #ff00ff;
+    }
+
+    .clicker2 {
+      background: linear-gradient(45deg, #00c9ff, #92fe9d);
+      color: #000;
+    }
+
+    .clicker2:hover {
+      box-shadow: 0 0 20px #00ffe1;
+    }
+
+    .clicker {
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+    }
+
+    .clicker:hover {
+      box-shadow: 0 0 20px #ff6a00;
+    }
+
+    .calculator {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 400px;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input[type="number"] {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      background-color: #222;
+      color: white;
+    }
+
+    .Result {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .Result h2 {
+      font-size: 1.8rem;
+      color: #00ffcc;
+    }
+
+    #output {
+      font-size: 1.5rem;
+      color: #ffea00;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Task 2: Interactive Page</h1>
+
+  <center>
+    <p>The button below changes background color</p>
+    <button class="clicker1" onclick="changeBackground()">Click me</button>
+  </center>
+
+  <center>
+    <p>The button below alerts the current time</p>
+    <button class="clicker2" onclick="showTime()">Alert me</button>
+  </center>
+
+  <form class="calculator" onsubmit="calculate(event)">
+    <label for="first_number">First number</label>
+    <input type="number" id="first_number" required />
+
+    <label for="second_number">Second number</label>
+    <input type="number" id="second_number" required />
+
+    <input type="submit" class="clicker" value="Calculate Sum" />
+  </form>
+
+  <div class="Result">
+    <h2>Result</h2>
+    <div id="output">--</div>
+  </div>
+
+  <script>
+    function changeBackground() {
+      const colors = ['#1a1a1a', '#001f3f', '#3d087b', '#004d4d', '#220022'];
+      const rand = Math.floor(Math.random() * colors.length);
+      document.body.style.backgroundColor = colors[rand];
+    }
+
+    function showTime() {
+      const now = new Date();
+      alert("Current Time: " + now.toLocaleTimeString());
+    }
+
+    function calculate(e) {
+      e.preventDefault();
+      const num1 = parseFloat(document.getElementById('first_number').value);
+      const num2 = parseFloat(document.getElementById('second_number').value);
+      const result = num1 + num2;
+      document.getElementById('output').textContent = `Sum = ${result}`;
+    }
+  </script>
+
+</body>
+</html>
