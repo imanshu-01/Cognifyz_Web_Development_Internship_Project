@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comedy Cards - Task1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #e1cf0c;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 18px rgba(255, 187, 0, 0.2);
+    }
+
+    img {
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      margin: 0 auto 15px;
+    }
+
+    .btn-success {
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+
+    p {
+      text-align: center;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="text-center text-primary"> Task 1 - Cards Showcase</h1>
+
+  <div class="container">
+    <div class="row gx-4 gy-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-4">
+          <img src="Assets/x1.jpg" alt="Funny Face 1">
+          <h2 class="text-center">The Late Riser</h2>
+          <p>"I set 10 alarms just to wake up... and still snoozed them all. Talent, I know!"</p>
+          <a href="#" class="btn btn-success">Laugh More</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-4">
+          <img src="Assets/x4.jpg" alt="Funny Face 2">
+          <h2 class="text-center">The Foodie Fighter</h2>
+          <p>"I only run... if someone says 'last slice of pizza' and starts moving!"</p>
+          <a href="#" class="btn btn-success">Read More</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-4">
+          <img src="Assets/x2.jpg" alt="Funny Face 3">
+          <h2 class="text-center">WiFi Philosopher</h2>
+          <p>"No WiFi for 10 minutes... I started talking to my family. They seem nice!"</p>
+          <a href="#" class="btn btn-success">Explore More</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card p-4">
+          <img src="Assets/x3.jpg" alt="Funny Face 4">
+          <h2 class="text-center">The Sleep Walker</h2>
+          <p>"I sleep like a baby... wake up every 2 hours crying about life choices!"</p>
+          <a href="#" class="btn btn-success">Giggle More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
