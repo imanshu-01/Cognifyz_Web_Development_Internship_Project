@@ -43,7 +43,7 @@ section,main{
     color: #ec6912c7;
 }
 #overview{
-    background-image: url(Asset/overview.jpg);
+    background-image: url(Assets/overview.jpg);
     background-position: center;
     background-attachment: fixed;
     background-color: rgb(32, 153, 223); 
@@ -94,7 +94,7 @@ section,main{
     width: 100%;
 }
 .contact-block{
-    background-image: url(Asset/office.jpg) ;
+    background-image: url(Assets/office.jpg) ;
     background-position: center;
     background-attachment: fixed;
     color: #fff;
@@ -168,4 +168,5 @@ footer{
     .Qualification-title{
         font-size: 1rem;
     }
+
 }
